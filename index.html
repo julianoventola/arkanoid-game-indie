@@ -3,13 +3,29 @@
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/png" href="./public/icon.png" />
+  <link rel="icon" type="image/png" href="/icon.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&display=swap"
+    rel="stylesheet">
   <title>Arkanoid - TS</title>
 </head>
 
 <body>
   <div id="app"></div>
+  <main id="main" class="main">
+    <canvas id="playField" width="1000" height="600"></canvas>
+    <img id="background" src="./src/images/background.png"></img>
+  </main>
+  <footer class="footer">
+    <div id="display">
+      <p id="score"></p>
+      <button id="start">Start</button>
+      <p id="info">Press play!</p>
+    </div>
+  </footer>
   <script type="module" src="/src/main.ts"></script>
 </body>
 
