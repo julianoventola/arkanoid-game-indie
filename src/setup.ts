@@ -6,7 +6,7 @@ import PURPLE_BRICK_IMAGE from './images/brick-purple.png';
 
 // Grab the canvas element for calculating the brick width
 // depending on canvas width
-const canvas: HTMLCanvasElement | null = document.querySelector('#playField');
+const canvas: HTMLCanvasElement | null = document.querySelector('#playField');
 
 // Constants
 export const STAGE_PADDING = 10;
@@ -23,7 +23,7 @@ export const PADDLE_WIDTH = 150;
 export const PADDLE_HEIGHT = 25;
 export const PADDLE_STARTX = 450;
 export const PADDLE_SPEED = 10;
-export const BALL_SPEED = 5;
+export const BALL_SPEED = 3;
 export const BALL_SIZE = 20;
 export const BALL_STARTX = 500;
 export const BALL_STARTY = 400;
@@ -50,6 +50,6 @@ export const LEVEL = [
   0, 0, 1, 1, 1, 1, 1, 1, 0, 0,
   0, 2, 2, 2, 2, 2, 2, 2, 2, 0,
   0, 3, 3, 3, 3, 3, 3, 3, 3, 0,
-  0, 0, 4, 4, 4, 4, 4, 4, 0, 0, 
+  0, 0, 4, 4, 4, 4, 4, 4, 0, 0,
   0, 0, 5, 5, 0, 0, 5, 5, 0, 0,
 ];
