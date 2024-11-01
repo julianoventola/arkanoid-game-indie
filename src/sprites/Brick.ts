@@ -2,8 +2,7 @@ import { Vector } from "../types";
 
 export default class Brick {
   private brickImage: HTMLImageElement = new Image();
-
-
+  
   constructor(
     private brickWidth: number,
     private brickHeight: number,
