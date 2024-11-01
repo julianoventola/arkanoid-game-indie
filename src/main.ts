@@ -65,6 +65,18 @@ function gameLoop(
     view.drawScore(score)
   }
 
+  if (ball.pos.y > view.canvas.height) {
+    gameOver = true
+  }
+
+  if (bricks.length === 0) {
+    return setGameWin(view)
+  }
+
+  if (gameOver) {
+    return setGameOver(view)
+  }
+
   requestAnimationFrame(() => gameLoop(view, bricks, paddle, ball, collision))
 }
 
