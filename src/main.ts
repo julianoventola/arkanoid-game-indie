@@ -1,4 +1,5 @@
 import CanvasView from './view/CanvasView';
+import Collision from "./Collision";
 
 import Brick from "./sprites/Brick";
 import Paddle from "./sprites/Paddle";
@@ -39,7 +40,8 @@ function gameLoop(
   view: CanvasView,
   bricks: Brick[],
   paddle: Paddle,
-  ball: Ball
+  ball: Ball,
+  collision: Collision
 ) {
   view.clear()
   view.drawBrick(bricks)
@@ -55,14 +57,24 @@ function gameLoop(
     paddle.movePaddle()
   }
 
+  collision.checkBallCollision(ball, paddle, view)
+  const isCollidingBrick = collision.isCollidingBricks(ball, bricks)
 
-  requestAnimationFrame(() => gameLoop(view, bricks, paddle, ball))
+  if (isCollidingBrick) {
+    score += 1
+    view.drawScore(score)
+  }
+
+  requestAnimationFrame(() => gameLoop(view, bricks, paddle, ball, collision))
 }
 
 function startGame(view: CanvasView,) {
   score = 0;
   view.drawInfo('')
   view.drawScore(0)
+
+  const collision = new Collision()
+
   const bricks = createBricks()
 
   const ball = new Ball(
@@ -80,7 +92,7 @@ function startGame(view: CanvasView,) {
     PADDLE_IMAGE
   )
 
-  gameLoop(view, bricks, paddle, ball)
+  gameLoop(view, bricks, paddle, ball, collision)
 }
 
 const view = new CanvasView("#playField")
