@@ -1,0 +1,129 @@
+:root {
+  --width: 1000px;
+  --height: 650px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  color: white;
+}
+
+body {
+  background-color: black;
+}
+
+#main {
+  position: relative;
+  color: white;
+  margin: 0 auto;
+  width: var(--width);
+  height: var(--height);
+  font-size: 32px;
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  height: fit-content;
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  border-top: 1px solid grey;
+  border-left: 1px solid grey;
+  border-right: 1px solid grey;
+  border-bottom: 1px solid grey;
+}
+
+.footer {
+  width: fit-content;
+  margin: 0 auto;
+}
+
+#display {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: var(--width);
+}
+
+#score,
+#info {
+  width: 200px;
+  color: white;
+  font-size: 28px;
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  margin: 0;
+}
+
+#start {
+  width: 160px;
+  height: 50px;
+  background-color: black;
+  color: white;
+  border: 1px solid white;
+  font-size: 32px;
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  cursor: pointer;
+}
+
+#start:hover {
+  background-color: #464646;
+}
+
+.htp {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid white;
+}
+
+.htp__title {
+  font-size: 48px;
+}
+
+.table {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.table__item {
+  margin: 8px 0;
+  display: flex;
+  align-items: center;
+  column-gap: 24px;
+}
+
+.table__text {
+  font-size: 20px;
+
+}
+
+.table__info {
+  color: rgb(255, 255, 0, 0.90);
+  font-weight: bold;
+}
+
+.table__brick {
+
+  width: 150px;
+  height: 50px;
+}
+
+.table__hit {
+  color: rgba(255, 0, 255, 0.9);
+  font-weight: bold;
+}
+
+.table__state {
+  color: rgb(0, 255, 255, 0.9);
+  font-weight: bold;
+}
