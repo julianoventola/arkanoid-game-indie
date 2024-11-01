@@ -3,6 +3,16 @@
   --height: 650px;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  color: white;
+}
+
 body {
   background-color: black;
 }
@@ -67,4 +77,53 @@ canvas {
 
 #start:hover {
   background-color: #464646;
+}
+
+.htp {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid white;
+}
+
+.htp__title {
+  font-size: 48px;
+}
+
+.table {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.table__item {
+  margin: 8px 0;
+  display: flex;
+  align-items: center;
+  column-gap: 24px;
+}
+
+.table__text {
+  font-size: 20px;
+
+}
+
+.table__info {
+  color: rgb(255, 255, 0, 0.90);
+  font-weight: bold;
+}
+
+.table__brick {
+
+  width: 150px;
+  height: 50px;
+}
+
+.table__hit {
+  color: rgba(255, 0, 255, 0.9);
+  font-weight: bold;
+}
+
+.table__state {
+  color: rgb(0, 255, 255, 0.9);
+  font-weight: bold;
 }

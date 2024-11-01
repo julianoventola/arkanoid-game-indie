@@ -20,11 +20,63 @@
     <img id="background" src="./src/images/background.png"></img>
   </main>
   <footer class="footer">
-    <div id="display">
+    <section id="display">
       <p id="score"></p>
       <button id="start">Start</button>
       <p id="info">Press play!</p>
-    </div>
+    </section>
+    <!-- todo: tutorial, images github -->
+    <section class="htp">
+      <h2 class="htp__title">How to play:</h2>
+      <ul class="table">
+        <li class="table__item">
+          <p class="table__text"> <span class="table__info">"a" or Arrow Left</span> - to move left</p>
+        </li>
+        <li class="table__item">
+          <p class="table__text"> <span class="table__info">"d" or Arrow Right</span> - to move left</p>
+        </li>
+        <li class="table__item">
+          <img class="table__brick" src="./src/images/brick-red.png" alt="A rectangle brick-red">
+          <p class="table__text"><span class="table__info">Brick Red</span> - takes
+            <span class="table__hit">1 hit</span> to
+            <span class="table__state">destroy</span>
+          </p>
+        </li>
+        <li class="table__item">
+          <img class="table__brick" src="./src/images/brick-green.png" alt="A rectangle brick-green">
+          <p class="table__text">
+            <span class="table__info">Brick Green</span> - takes
+            <span class="table__hit">1 hit</span> to
+            <span class="table__state">destroy</span>
+          </p>
+        </li>
+        <li class="table__item">
+          <img class="table__brick" src="./src/images/brick-yellow.png" alt="A rectangle brick-yellow">
+          <p class="table__text">
+            <span class="table__info">Brick Yellow</span> - takes
+            <span class="table__hit">2 hits</span> to
+            <span class="table__state">destroy</span>
+          </p>
+        </li>
+        <li class="table__item">
+          <img class="table__brick" src="./src/images/brick-blue.png" alt="A rectangle brick-blue">
+          <p class="table__text">
+            <span class="table__info">Brick Blue</span> - takes
+            <span class="table__hit">2 hits</span> to
+            <span class="table__state">destroy</span>
+          </p>
+        </li>
+        <li class="table__item">
+          <img class="table__brick" src="./src/images/brick-purple.png" alt="A rectangle brick-purple">
+          <p class="table__text">
+            <span class="table__info">Brick Purple</span> - takes
+            <span class="table__hit">3 hits</span> to
+            <span class="table__state">destroy</span>
+          </p>
+        </li>
+
+      </ul>
+    </section>
   </footer>
   <script type="module" src="/src/main.ts"></script>
 </body>
